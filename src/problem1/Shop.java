@@ -21,8 +21,17 @@ public class Shop
             itemPrice = scan.nextDouble();
             System.out.print ("Enter the quantity: ");
             quantity = scan.nextInt();
-// *** create a new item and add it to the cart
+            // *** create a new item and add it to the cart
+            Item newItem = new Item(itemName ,itemPrice ,quantity);
+            cart.add(newItem);
             // *** print the contents of the cart object using println
+            double totalPrice = 0;
+            for (Item it : cart){
+                System.out.println(it.getName());
+                totalPrice += it.getQuantity() * it.getPrice();
+            }
+            System.out.println("total price is :" + totalPrice);
+
             System.out.print ("Continue shopping (y/n)? ");
             keepShopping = scan.nextLine();
         }
