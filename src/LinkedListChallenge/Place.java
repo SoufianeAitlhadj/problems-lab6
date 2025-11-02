@@ -1,4 +1,4 @@
-package LinkedList_Chanllenge;
+package LinkedListChallenge;
 
 public class Place {
     private String name;
@@ -9,16 +9,11 @@ public class Place {
         this.distance = distance;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getDistance() {
-        return distance;
-    }
+    public String getName() { return name; }
+    public int getDistance() { return distance; }
 
     @Override
     public String toString() {
-        return String.format("%s (%d km)", name, distance);
+        return name + " (" + distance + " km)";
     }
 }
